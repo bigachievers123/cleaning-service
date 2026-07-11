@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Hero() {
   return (
     <section className="min-h-[80vh] bg-slate-100 flex items-center justify-center">
@@ -16,13 +18,19 @@ function Hero() {
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-          <button className="rounded-lg bg-teal-600 px-8 py-3 text-white hover:bg-teal-700">
+          <Link
+            to="/booking"
+            className="rounded-lg bg-teal-600 px-8 py-3 text-center text-white transition hover:bg-teal-700"
+          >
             Book Now
-          </button>
+          </Link>
 
-          <button className="rounded-lg border-2 border-teal-600 px-8 py-3 text-teal-600 hover:bg-teal-600 hover:text-white">
+          <Link
+            to="/services"
+            className="rounded-lg border-2 border-teal-600 px-8 py-3 text-center text-teal-600 transition hover:bg-teal-600 hover:text-white"
+          >
             Our Services
-          </button>
+          </Link>
         </div>
       </div>
     </section>
